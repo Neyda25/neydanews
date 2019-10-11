@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		{% block titulo %}Noticias{% endblock %}
+	</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark" >
+		<div id="header" class="bg-ligth py-2">
+			
+		<a href="{% url 'blog:listar_noticias' %}" class="text-danger">
+			<h1 class="display-2 text-center bg-dark" style="background-image: 
+			url(https://thumbs.dreamstime.com/b/textura-azul-del-fondo-para-el-elemento-del-sitio-web-o-del-dise%C3%B1o-del-arte-gr%C3%A1fico-l%C3%ADnea-rasgu%C3%B1ada-textura-44478169.jpg) ;">
+			Neyda <b><i>News</i></b>
+			</h1>
+		</a>
+		</div>
+		<div class="container bg-white border border-danger rounded-lg" id="principal">
+			{% block informacion %}
+
+			{% endblock %}
+		</div>
+		<footer id="stiky-footer" class="py-4 bg-dark text-white-50">
+			<div class="container text-center">
+				<small>
+					Todos Los Derechos Reservados &copy; Neyda News
+				</small>
+			</div>
+		</footer>
+</body>
+</html>
